@@ -54,8 +54,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/yourimage:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/myapp:latest .
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/yourimage:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/myapp:latest
