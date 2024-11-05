@@ -52,8 +52,8 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_TOKEN }}
+          username: ${{ daniel3456 }}
+          password: ${{ Daniel123456789@ }}
 
       - name: Build Docker image
         run: docker build -t yourusername/yourimage:latest .  # Replace with your Docker Hub username and image name
@@ -67,16 +67,5 @@ jobs:
     permissions:
       contents: write
 
-    steps:
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ daniel3456 }}
-          password: ${{ Daniel123456789@ }}
-
-      - name: Create Release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: "v1.0.0"  # Adjust the version as needed
-          name: "Release v1.0.0"  # Adjust the release name as needed
-          body: "Release notes for v1.0.0"  # Optional release notes
+  
+     
